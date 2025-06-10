@@ -1,5 +1,8 @@
 package ru.netology.javaqa.dz9incaps;
 
+import lombok.Getter;
+
+@Getter
 public class Radio {
     
     private int maxStation;
@@ -19,10 +22,6 @@ public class Radio {
     }
 
     // Методы для работы с радиостанцией
-    public int getCurrentStation() {
-        return currentStation;
-    }
-
     public void setCurrentStation(int station) {
         if (station < 0) {
             return;
@@ -50,10 +49,6 @@ public class Radio {
     }
 
     // Методы для работы с громкостью
-    public int getCurrentVolume() {
-        return currentVolume;
-    }
-
     public void increaseVolume() {
         if (currentVolume < 100) {
             currentVolume = currentVolume + 1;
@@ -64,10 +59,5 @@ public class Radio {
         if (currentVolume > 0) {
             currentVolume = currentVolume - 1;
         }
-    }
-
-    // Геттер для максимального номера станции (для тестов)
-    public int getMaxStation() {
-        return maxStation;
     }
 } 
